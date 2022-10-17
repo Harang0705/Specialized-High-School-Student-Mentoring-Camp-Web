@@ -1,0 +1,47 @@
+.header 
+{
+    width: 100%;
+    height: 80px;
+}
+
+.header > .menuWarp 
+{
+    width: 100%;
+    height: 80px;
+    background-color: #f2cfa5;
+}
+
+.header > .menuWarp > .menuLogo
+{
+    margin: 25px 0px 0px 30px;
+    float: left;
+}
+
+.header > .menuWarp > .menu
+{
+    float: right;
+}
+
+.header > .menuWarp > .menu > ul
+{
+    margin-right: 40px;
+}
+
+.header > .menuWarp > .menu > ul > li
+{
+    margin: 0px 0px 0px 30px;
+    float: left;
+}
+
+.header > .menuWarp > .menu > ul > li > a
+{
+    text-decoration: none;
+}
+
+.header > .menuWarp > .menu > ul > li > a > span
+{
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 80px;
+}

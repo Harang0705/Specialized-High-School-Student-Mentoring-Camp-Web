@@ -1,0 +1,94 @@
+.page 
+{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.page > .expression 
+{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.page > .expression > h1 
+{
+    font-size: 4.063rem;
+    font-weight: 700;
+
+    color: #b5c7ed;
+    text-shadow: 0.2px 0.2px #000000;
+}
+
+.page > .expression > h3 
+{
+    margin-top: 40px;
+    
+    font-size: 1.63rem;
+    font-weight: 700;
+
+    color: #b5c7ed;
+    text-shadow: 0.5px 0.5px #868e96;
+}
+
+.page > .expression > h1 > a 
+{
+    color: #ffafd8;
+    text-decoration: underline;
+}
+
+.page > .expression > h3 > a 
+{
+    color: #ffafd8;
+    text-shadow: 0.5px 0.5px #afffba;
+    text-decoration: underline;
+}
+
+.interest 
+{
+    display: inline-block;
+    margin: 75px 0px 103px 0px;
+}
+
+.interest > h1 
+{
+    font-size: 2.13rem;
+    font-weight: 700;
+}
+
+.interest > .personList
+{
+    width: 1300px;
+    height: 330px;
+
+    margin-top: 30px;
+    
+    float:left;
+    overflow-x: scroll;
+    white-space: nowrap;
+    direction:ltr;
+}
+
+.interest > .personList > .unit
+{
+    display: inline-block;
+    width: 360px;
+    height: 260px;
+    margin-left: 100px;
+
+    padding: 20px;
+
+    border: 0px;
+    border-radius: 30px 0px;
+    background-color: #ffafd8;
+}
+
+.interest > .personList > .unit > a
+{
+    width: 360px;
+    height: 260px;
+    font-size: 20px;
+}
+
+.qna {
+    height: 400px;
+}
