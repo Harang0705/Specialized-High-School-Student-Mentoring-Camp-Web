@@ -47,11 +47,5 @@ table {
 	border-spacing: 0;
 }
 ::-webkit-scrollbar {
-	width: 5px;
-  	height: 9px;
-  	background-color: #aaa;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #000;
+	display: none;
 }
