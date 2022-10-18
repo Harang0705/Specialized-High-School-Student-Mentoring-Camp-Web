@@ -10,11 +10,11 @@
     <title>#찾다</title>
 </head>
 <body>
-    <div class="reservation_popup">
+    <div id="reservation_popup">
         <div class="inner">
             <div class="title">
                 <p>상담신청</p>
-                <a>X</a>
+                <a id="reservation_popup_delete">X</a>
             </div>
             <div class="content">
                 <p>새로운 목표와, 새로운 꿈을 찾기 위한 도전! 이러한 목표를 가진채 살아가고 있어요.</p>
@@ -92,7 +92,7 @@
                         <span>#후진학</span>
                         <span>#뭐하지</span>
                     </div>
-                    <button>상담 신청하기</button>
+                    <button onclick="popup_push(1)">상담 신청하기</button>
                 </div>
                 <div class="unit">
                     <p class="mainTitle">새로운 목표와, 새로운 꿈을 찾기 위한 도전! 이러한 목표를 가진채 살아가고 있어요.</p>
@@ -121,7 +121,7 @@
                     <button>상담 신청하기</button>
                 </div>
                 <div class="unit">
-                    <p class="mainTitle">새로운 목표와, 새로운 꿈을 찾기 위한 도전! 이러한 목표를 가진채 살아가고 있어요.</p>
+                    <p class="mainTitle"></p>
                     <br/>
                     <p>삼일공업고 졸업</p>
                     <br/>
@@ -163,5 +163,23 @@
         </div>
     </div>
 </body>
-<script src="{{ url('js/index.js') }}"></script>
+<script>
+    var popupElement = document.getElementById('reservation_popup');
+
+    // popup 불러오기 향후 axios 통신으로 해당 게시글 예약 정보 가져올 예정
+    function popup_push(__idx) {
+        var idx = __idx;
+        
+        popupElement.style.display = "block";
+    } 
+
+    // 팝업 지우기
+    document.getElementById('reservation_popup_delete').addEventListener('click', function() {
+        var state = confirm('정말로 상담 신청을 취소 하실껀가요?');
+
+        if (state == true) {
+            popupElement.style.display = "none";
+        }
+    });
+</script>
 </html>

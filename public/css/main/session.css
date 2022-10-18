@@ -61,8 +61,7 @@
     height: 330px;
 
     margin-top: 30px;
-    
-    float:left;
+
     overflow-x: scroll;
     white-space: nowrap;
     direction:ltr;
@@ -81,10 +80,11 @@
 
 .interest > .personList > .unit
 {
+    /* float: left; */
     display: inline-block;
     width: 360px;
     height: 260px;
-    margin-left: 100px;
+    margin-left: 25px;
 
     padding: 20px;
 
@@ -104,6 +104,7 @@
 
 .interest > .personList > .unit > .mainTitle
 {
+    height: 5rem;
     font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
@@ -138,8 +139,9 @@
     background-color: #f3cdcd;
 }
 
-.reservation_popup 
+#reservation_popup 
 {
+    display: none;
     z-index: 999;
     position: absolute;
     width: 100%;
@@ -147,7 +149,7 @@
     background-color: rgba(0,0,0, 0.5);
 }
 
-.reservation_popup > .inner 
+#reservation_popup > .inner 
 {
     width: 30rem;
     height: 40rem;
@@ -156,14 +158,14 @@
     border-radius: 10px;
 }
 
-.reservation_popup > .inner > .title
+#reservation_popup > .inner > .title
 {
     width: 100%;
     height: 3rem;
     background-color: #ff3366;
 }
 
-.reservation_popup > .inner > .title > p
+#reservation_popup > .inner > .title > p
 {
     font-size: 1.5rem;
     line-height: 3rem;
@@ -172,8 +174,8 @@
     color: #fff;
 }
 
-.reservation_popup > .inner > .title > p,
-.reservation_popup > .inner > .title > a
+#reservation_popup > .inner > .title > p,
+#reservation_popup > .inner > .title > a
 {
     font-size: 1.5rem;
     line-height: 3rem;
@@ -181,17 +183,17 @@
     color: #fff;
 }
 
-.reservation_popup > .inner > .title > p {
+#reservation_popup > .inner > .title > p {
     margin-left: 1rem;
     float:left;
 }
 
-.reservation_popup > .inner > .title > a {
+#reservation_popup > .inner > .title > a {
     margin-right: 1rem;
     float:right;
 }
 
-.reservation_popup > .inner > .content > p
+#reservation_popup > .inner > .content > p
 {
     white-space: normal;
     word-wrap: break-word;
@@ -202,47 +204,47 @@
     font-weight: 700;
 }
 
-.reservation_popup > .inner > .time {
+#reservation_popup > .inner > .time {
     margin-left: 1rem;
 }
 
-.reservation_popup > .inner > .time > .title
+#reservation_popup > .inner > .time > .title
 {
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.reservation_popup > .inner > .time > select 
+#reservation_popup > .inner > .time > select 
 {
     width: 28rem;
     margin-top: 0.5rem;
     margin-bottom: 10rem;
 }
 
-.reservation_popup > .inner > .time > .timeout
+#reservation_popup > .inner > .time > .timeout
 {
     margin-top: 1rem;
 }
 
-.reservation_popup > .inner > .time > .timeout > span 
+#reservation_popup > .inner > .time > .timeout > span 
 {
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.reservation_popup > .inner > .time > .timeout > p
+#reservation_popup > .inner > .time > .timeout > p
 {
     font-size: 1rem;
     font-weight: 700;
 }
 
-.reservation_popup > .inner > .button 
+#reservation_popup > .inner > .button 
 {
     margin-top: 3rem;
     margin-left: 1rem;
 }
 
-.reservation_popup > .inner > .button > button
+#reservation_popup > .inner > .button > button
 {
     width: 28rem;
     height: 3.5rem;
@@ -255,7 +257,7 @@
     border-radius: 5px;
 }
 
-.reservation_popup > .inner > .button > button:hover 
+#reservation_popup > .inner > .button > button:hover 
 {
     background-color: #f3cdcd;
 }
