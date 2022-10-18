@@ -74,7 +74,7 @@
     <div class="page">
         <div class="expression">
             <h1>아직 로그인을 안하셨네요!</h1>
-            <h1>쉽고 간편한 <a href="">회원가입</a>으로 참여해요!</h1>
+            <h1>쉽고 간편한 <a href="{{ route('singUp.index') }}">회원가입</a>으로 참여해요!</h1>
             <h3> 기존 회원 이라면 <a href="">로그인</a></h3>
         </div>
 
