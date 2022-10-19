@@ -1,0 +1,95 @@
+.interest 
+{
+    display: inline-block;
+    margin: 75px 0px 103px 0px;
+}
+
+.interest > h1 
+{
+    font-size: 2.13rem;
+    font-weight: 700;
+}
+
+.interest > .personList
+{
+    width: 1300px;
+    height: 330px;
+
+    margin-top: 30px;
+
+    overflow-x: scroll;
+    white-space: nowrap;
+    direction:ltr;
+}
+
+.interest > ::-webkit-scrollbar {
+    display: inline-block;
+	width: 5px;
+  	height: 9px;
+  	background-color: #aaa;
+}
+
+.interest > ::-webkit-scrollbar-thumb {
+	background: #000;
+}
+
+.interest > .personList > .unit
+{
+    /* float: left; */
+    display: inline-block;
+    width: 360px;
+    height: 260px;
+    margin-left: 25px;
+
+    padding: 20px;
+
+    border-radius: 30px 0px;
+    background-color: #fdb7ba;
+}
+
+.interest > .personList > .unit > p 
+{
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: keep-all;
+
+    color: #ffffff;
+    text-shadow: 0.01rem 0.01rem #000;
+}
+
+.interest > .personList > .unit > .mainTitle
+{
+    height: 5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0.05rem 0.05rem #000;
+}
+
+.interest > .personList > .unit > .tags 
+{
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.interest > .personList > .unit > .tags > span
+{
+    padding: 10px;
+    background-color: #beebfd;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.interest > .personList > .unit > button
+{
+    width: 100%;
+    height: 30px;
+    background-color: #f3cdad;
+    border-radius: 10px;
+}
+
+.interest > .personList > .unit > button:hover 
+{
+    background-color: #f3cdcd;
+}
