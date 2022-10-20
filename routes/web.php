@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserSingUpController;
+use App\Http\Controllers\UserLoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +21,8 @@ Route::get('/', function () {
 
 Route::prefix('singUp')->group(function () {
     Route::get('/', [UserSingUpController::class, 'index'])->name('singUp.index');
+});
+
+Route::prefix('login')->group(function () {
+    Route::get('/', [UserLoginController::class, 'index'])->name('login.index');
 });
