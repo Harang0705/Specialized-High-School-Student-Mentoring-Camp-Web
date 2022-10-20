@@ -46,6 +46,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-::-webkit-scrollbar {
+
+/* 
+	추가한 css List
+*/
+::-webkit-scrollbar 
+{
 	display: none;
+}
+
+[type="radio"]
+{
+	vertical-align: center;
+	appearance: none;
 }

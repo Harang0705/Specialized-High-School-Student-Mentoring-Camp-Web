@@ -2,7 +2,11 @@
 //     var d = document.getElementById('scroll');
 
 //     console.log(d.offsetHeight);
-//     // if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
-//     //     scrolledToBottom(e);
-//     //   }
 // });
+
+document.getElementsByClassName('reservation_popup').style.display = "inline-block";
+document.getElementById().addEventListener
+function popup_push(__i) 
+{
+
+}
