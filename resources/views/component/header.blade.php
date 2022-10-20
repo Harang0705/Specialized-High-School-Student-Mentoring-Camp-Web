@@ -1,7 +1,7 @@
 <header class="header">
     <div class="menuWarp">
         <h1 class="menuLogo">
-            <a href=""><img src="{{ url("image/select.png")}}"/></a>
+            <a href="{{ route('index') }}"><img src="{{ url("image/select.png")}}"/></a>
         </h1>
         <div class="menu">
             <ul>

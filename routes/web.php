@@ -15,7 +15,7 @@ use App\Http\Controllers\UserSingUpController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::prefix('singUp')->group(function () {
     Route::get('/', [UserSingUpController::class, 'index'])->name('singUp.index');
