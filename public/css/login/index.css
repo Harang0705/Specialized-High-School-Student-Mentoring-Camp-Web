@@ -1,0 +1,89 @@
+.loginInner
+{
+    width: 20rem;
+    margin: 3rem auto; 
+
+    border: 0.05rem solid #000;
+    border-radius: 0.15rem;
+}
+
+.loginInner > .loginHeader
+{
+    width: 100%;
+    height: 3rem;
+    
+    background-color: #ff3366;  
+}
+
+.loginInner > .loginHeader > span
+{
+    font-size: 1.5rem;
+    line-height: 3rem;
+
+    color: #fff;
+    font-weight: 700;
+    
+    margin-left: 1rem;
+}
+
+.loginInner > .inputUserInformation 
+{
+    width: 100%;
+}
+
+.loginInner > .inputUserInformation > .userName,
+.loginInner > .inputUserInformation > .userNumber
+{
+    width: 100%;
+    height: 3rem;
+}
+
+.loginInner > .inputUserInformation span
+{
+    float:left;
+    width: 5rem;
+
+    font-size: 1rem;
+    line-height: 3rem;
+
+    color: #000;
+    font-weight: 700;
+    
+    margin-left: 1rem;
+}
+
+.loginInner > .inputUserInformation input
+{
+    width: 11rem;
+    height: 1rem;
+
+    color: #000;
+    font-weight: 700;
+
+    padding: 0.1rem;
+    border: 0.01rem solid #000;
+    margin: 0.89rem 0;
+}
+
+.loginInner > .loginButton > button
+{
+    width: 18rem;
+    height: 2rem;
+
+    margin: 1rem;
+
+    font-weight: 700;
+
+    background-color: #f3cdad;
+}
+
+.loginInner > .singUpMove > p
+{
+    width: 100%;
+    height: 2rem;
+
+    font-size: 0.75rem;
+    text-align: center;
+
+    font-weight: 700;
+}
