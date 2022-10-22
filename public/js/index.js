@@ -10,3 +10,4 @@ function popup_push(__i)
 {
 
 }
+document.getElementsByName

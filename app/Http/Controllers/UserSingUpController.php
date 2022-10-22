@@ -35,7 +35,9 @@ class UserSingUpController extends Controller
      */
     public function store(Request $request)
     {
-        dump($request->all());
+        $value = UserSingUp::upload($request->all());
+
+        return $value; // user 고유번호 전달
     }
 
     /**

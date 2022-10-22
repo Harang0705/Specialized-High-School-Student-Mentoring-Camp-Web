@@ -1,7 +1,7 @@
 @include('template.header')
 @include('component.header')
 
-<form id="form">
+<form onsubmit="return false;" id="form">
     <div class="singUpInner">
         <div class="title">
             <span>회원가입</span>
@@ -56,7 +56,7 @@
                 </p>
             </div>
             <div class="singUpAgree">
-                <d id="singUpBtn">회원가입</d>
+                <button id="singUpBtn">회원가입</button>
             </div>
         </div>
     </div>
@@ -64,26 +64,25 @@
 
 <script>
     document.getElementById('singUpBtn').addEventListener('click', function () {
-        var element = document.getElementById('form');
+    if (confirm('회원가입을 하시겠습니까?') == true) {
+        var element = document.getElementById('form')
 
         var studentState = element['studentState'].value; // 재학생 졸업생 여부
         var userName = element['name'].value; // 이름
         var affiliation = element['affiliation'].value; // 계열
         var universityState = element['universityState'].value; // 대학교 진학여부
         var specializeState = element['specializeState'].value; // 고등학교 전공 유지 여부
-
+        
         if (studentState.length == 0) {
             alert('재학생 / 졸업생 여부를 선택해주세요.');
-            
             return false;
         }
-
+    
         if (userName.length == 0) {
             alert('이름을 입력해주세요.');
-            
             return false;
         }
-
+    
         axios.post("{{ route('singUp.store') }}", {
             studentState: studentState,
             userName : userName,
@@ -92,12 +91,15 @@
             specializeState : specializeState
         })
         .then(function (__res) {
-
+            if (__res['status'] == '200') {
+                alert('회원가입이 성공했습니다. \n유저 고유번호 : ' + __res['data']['user_number'] );
+                location.href = "{{ route('index') }}";
+            }
         })
         .catch(function (__err) {
-
+            alert(__err);
         });
-        // console.log(name, studentState, affiliation, universityState, specializeState);
+    }
     });
 </script>
 @include('template.footer')
