@@ -7,10 +7,10 @@
     </div>
     <div class="information">
         <div class="studentState">
-            <span>졸업생/재학생 여부</span>
-            <p>졸업생</p>
-            <input type="radio" name="state" value="student">
+            <span>재학생 / 졸업생 여부</span>
             <p>재학생</p>
+            <input type="radio" name="state" value="student">
+            <p>졸업생</p>
             <input type="radio" name="state" value="graduate">
         </div>
         <div class="name">
@@ -37,15 +37,15 @@
         <div class="universityState">
             <span>대학교 진학여부</span>
             <select name="universityState">
-                <option value="0">진학예정</option>
-                <option value="1">미진학예정</option>
+                <option value="0">진학예정 or 진학</option>
+                <option value="1">미진학예정 or 바로 취업</option>
             </select>
         </div>
         <div class="specializeState">
             <span>고등학교 전공 유지 여부</span>
             <select name="specializeState">
-                <option value="0">유지 희망</option>
-                <option value="1">유지 비희망</option>
+                <option value="0">유지</option>
+                <option value="1">유지를 희망하지 않음</option>
             </select>
         </div>
         <div class="description">
