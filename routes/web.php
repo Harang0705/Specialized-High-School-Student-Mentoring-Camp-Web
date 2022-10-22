@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::prefix('singUp')->group(function () {
     Route::get('/', [UserSingUpController::class, 'index'])->name('singUp.index');
+    Route::post('/store', [UserSingUpController::class, 'store'])->name('singUp.store');
 });
 
 Route::prefix('login')->group(function () {

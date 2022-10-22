@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserSingUp;
+use Illuminate\Http\Request;
 
 class UserSingUpController extends Controller
 {
@@ -34,7 +35,7 @@ class UserSingUpController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dump($request->all());
     }
 
     /**
