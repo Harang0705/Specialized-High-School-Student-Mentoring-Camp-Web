@@ -1,5 +1,5 @@
-@include('template.header')
-@include('component.header')
+@include('template.head')
+@include('component.headerMenu')
 
 <form onsubmit="return false;" id="form">
     <div class="singUpInner">

@@ -1,6 +1,6 @@
-@include('template.header')
+@include('template.head')
     @include('component.popup')
-    @include('component.header')
+    @include('component.headerMenu')
     <div class="page">
         <div class="expression">
             <h1>아직 로그인을 안하셨네요!</h1>

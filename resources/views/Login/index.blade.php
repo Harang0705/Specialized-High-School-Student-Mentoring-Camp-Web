@@ -1,5 +1,5 @@
-@include('template.header')
-@include('component.header')
+@include('template.head')
+@include('component.headerMenu')
 <div class="loginInner">
     <div class="loginHeader">
         <span>로그인</span>
