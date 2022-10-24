@@ -18,6 +18,19 @@
                 <span>이름</span>
                 <input type="text" name="name">
             </div>
+            <div class="email">
+                <span>이메일</span>
+                <input type="text" name="email">
+            </div>
+            <div class="password">
+                <span>비밀번호</span>
+                <p>* 8자리 이상 영어 대소문자 + 숫자로만 구성  </p>
+                <input type="password" name="password" minlength="6" maxlength="15">
+            </div>
+            <div class="passwordCheck">
+                <span>비밀번호 체크</span>
+                <input type="password" name="passwordCheck">
+            </div>
             <div class="affiliation">
                 <span>계열</span>
                 <select name="affiliation">
@@ -51,8 +64,8 @@
             </div>
             <div class="description">
                 <p>
-                    * 로그인은 이름 + 고유번호로 진행됩니다. (고유번호는 회원가입시 발급) 
-                    <br/> 이름의 오탈자가 없는지 다시 한번 확인 부탁드립니다.
+                    * 이름의 오탈자가 없는지 다시 한번 확인 부탁드립니다.
+                    <br/> * 위 개인정보는 행사 종료시 즉시 파기 됩니다.
                 </p>
             </div>
             <div class="singUpAgree">
@@ -69,23 +82,47 @@
 
             var studentState = element['studentState'].value; // 재학생 졸업생 여부
             var userName = element['name'].value; // 이름
+            var userEmail = element['email'].value; // 이메일
+            var userPassword = element['password'].value; // 비밀번호
+            var userPasswordCheck = element['passwordCheck'].value; // 비밀번호 체크
             var affiliation = element['affiliation'].value; // 계열
             var universityState = element['universityState'].value; // 대학교 진학여부
             var specializeState = element['specializeState'].value; // 고등학교 전공 유지 여부
-        
+            
+            var emailRegExp = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            var passwordRegExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            // 재학생 / 졸업생 여부
             if (studentState.length == 0) {
                 alert('재학생 / 졸업생 여부를 선택해주세요.');
                 return false;
             }
     
+            // 이름 입력
             if (userName.length == 0) {
                 alert('이름을 입력해주세요.');
                 return false;
             }
-    
+
+            // 비빌번호 확인 (정규식에 비 일치 하거나, 두개의 패스워드가 일치하지 않을 경우)
+            if (
+                passwordRegExp.test(userPassword) == false
+                userPassword != userPasswordCheck
+            ) {
+                alert('비밀번호를 확인해주세요.');
+                return false;
+            }
+
+            // 이메일 정규식 테스트
+            if (emailRegExp.test(userEmail) == false) {
+                alert('올바른 형식의 이메일이 아닙니다.');
+                return false;
+            }
+
             axios.post("{{ route('singUp.store') }}", {
                 studentState: studentState,
                 userName : userName,
+                userPassword : userPassword,
+                userEmail : userEmail,
                 affiliation : affiliation,
                 universityState : universityState,
                 specializeState : specializeState

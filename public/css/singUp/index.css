@@ -1,6 +1,6 @@
 .singUpInner
 {
-    width: 40rem;
+    width: 20rem;
     
     margin: 4rem auto;
     border: 0.2rem solid #000;
@@ -33,47 +33,111 @@
 
 .singUpInner > .information > .studentState,
 .singUpInner > .information > .name,
+.singUpInner > .information > .email,
+.singUpInner > .information > .password,
+.singUpInner > .information > .passwordCheck,
 .singUpInner > .information > .affiliation,
 .singUpInner > .information > .universityState,
 .singUpInner > .information > .specializeState
 {
     width: 100%;
-    height: 3rem;
+    height: 4rem;
+    margin-top: 0.5rem;
 }
 
 .singUpInner > .information > .studentState > span,
 .singUpInner > .information > .name > span,
+.singUpInner > .information > .email > span,
+.singUpInner > .information > .passwordCheck > span,
 .singUpInner > .information > .affiliation > span,
 .singUpInner > .information > .universityState > span,
 .singUpInner > .information > .specializeState > span
 {
     float: left;
 
-    width: 300px;
-    height: 100%;
+    width: 18rem;
+    height: 2rem;
     
     margin : 0 1rem;
     
-    font-size : 1.25rem;
+    font-size : 1rem;
     font-weight: 700;
 
-    line-height: 3rem;
+    line-height: 2rem;
+}
+
+
+.singUpInner > .information > .password
+{
+    float: left;
+    width: 20rem;
+}
+
+.singUpInner > .information > .password > span
+{
+    float: left;
+
+    width: 18rem;
+    height: 1.25rem;
+    
+    margin : 0 1rem;
+    
+    font-size : 1rem;
+    font-weight: 700;
+}
+
+.singUpInner > .information > .password > p
+{
+    float: left;
+
+    width: 18rem;
+    height: 0.75rem;
+    
+    margin : 0 1rem;
+    
+    font-size : 0.75rem;
+    font-weight: 700;
 }
 
 .singUpInner > .information > .name > input,
+.singUpInner > .information > .email > input,
+.singUpInner > .information > .password > input,
+.singUpInner > .information > .passwordCheck > input
+{
+    width: 12rem;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+.singUpInner > .information > .name > input:focus,
+.singUpInner > .information > .email > input:focus,
+.singUpInner > .information > .password > input:focus,
+.singUpInner > .information > .passwordCheck > input:focus
+{
+    border-bottom: 1px solid #ff3366;
+
+    transition: 0.3s;
+}
+
+.singUpInner > .information > .name > input,
+.singUpInner > .information > .email > input,
+.singUpInner > .information > .password > input,
+.singUpInner > .information > .passwordCheck > input,
 .singUpInner > .information > .affiliation > select,
 .singUpInner > .information > .universityState > select,
 .singUpInner > .information > .specializeState > select
 {
+    float: left;
     height: 1.25rem;
-    margin: 0.875rem 0;
+    margin: 0.325rem 1rem;
 }
 
 .singUpInner > .information > .studentState > p
 {
     float: left;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 2rem;
+    margin-left: 1rem;
 
     font-size : 1rem;
 }
@@ -84,7 +148,7 @@
     
     width: 1.25rem;
     height: 1.25rem;
-    margin: 0.875rem;
+    margin: 0.325rem 1rem;
 
     border: max(2px, 0.1rem) solid gray;
 	border-radius: 50%;
@@ -95,20 +159,24 @@
     border: max(2px, 0.4rem) solid #fadee1;
 }
 
-.singUpInner > .information > .description {
+.singUpInner > .information > .description 
+{
+    float: left;
+    width: 18rem;
+    margin: 1rem;
     margin-top: 0.75rem;
     margin-left : 1rem;
 }
 
 .singUpInner > .information > .description > p
 {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 700;
 }
 
 .singUpInner > .information > .singUpAgree > button
 {
-    width: 38rem;
+    width: 18rem;
     height: 3rem;
     
     margin: 1rem;
@@ -120,12 +188,5 @@
 
 .singUpInner > .information > .singUpAgree > button:hover
 {
-    width: 38rem;
-    height: 3rem;
-    
-    margin: 1rem;
-
     background-color: #f3cdcd;
-    font-size: 1.75rem;
-    font-weight: 700;
 }

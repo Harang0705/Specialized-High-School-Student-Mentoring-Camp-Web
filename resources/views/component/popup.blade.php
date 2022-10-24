@@ -33,3 +33,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    var popupElement = document.getElementById('reservation_popup');
+
+    // popup 불러오기 향후 axios 통신으로 해당 게시글 예약 정보 가져올 예정
+    function popup_push(__idx) {
+        var idx = __idx;
+        
+        document.body.classList.add('reservation_popup_hidden');
+        popupElement.style.display = "block";
+    } 
+
+    // 팝업 지우기
+    document.getElementById('reservation_popup_delete').addEventListener('click', function() {
+        var state = confirm('정말로 상담 신청을 취소 하실껀가요?');
+
+        if (state == true) {
+            document.body.classList.remove('reservation_popup_hidden');
+            popupElement.style.display = "none";
+        }
+    });
+</script>

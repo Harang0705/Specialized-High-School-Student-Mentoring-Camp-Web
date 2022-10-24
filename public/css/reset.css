@@ -60,3 +60,7 @@ table {
 	vertical-align: center;
 	appearance: none;
 }
+
+textarea:focus, input:focus{
+    outline: none;
+}
