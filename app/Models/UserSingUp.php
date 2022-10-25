@@ -56,4 +56,40 @@ class UserSingUp extends Authenticatable
             'user_number' => 1
         ];
     }
+
+    
+    /**
+     * $userLoginAccessInformation = [
+     *  'name' => 유저 이름
+     *  'number' => 유저 고유 번호
+     * ]
+     */
+    public static function userLogin(array $userLoginAccessInformation)
+    {
+        try {
+            $name = $userLoginAccessInformation['name'];
+            $userNumber = $userLoginAccessInformation['number'];
+
+            $takeLoginUser = UserSingUp::where('user_name', $name)->first();
+
+            if (
+                $takeLoginUser == null
+                || $takeLoginUser->user_number != $userNumber
+            ) {
+                return [
+                    'status' => '500',
+                    'message' => "유저 정보를 다시 한번 확인해주세요."
+                ];
+            }
+
+            return [
+                'status' => '200',
+                'message' => "정상적으로 처리 완료"
+            ];
+            
+        } catch (ThrowUpException $th) {
+            return $th;
+        }
+    }
+    
 }

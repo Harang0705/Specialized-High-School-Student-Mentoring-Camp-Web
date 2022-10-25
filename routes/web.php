@@ -26,4 +26,5 @@ Route::prefix('singUp')->group(function () {
 
 Route::prefix('login')->group(function () {
     Route::get('/', [UserLoginController::class, 'index'])->name('login.index');
+    Route::post('/store', [UserLoginController::class, 'store'])->name('login.store');
 });

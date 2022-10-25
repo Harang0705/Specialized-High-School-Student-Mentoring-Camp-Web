@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserSingUp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserLoginController extends Controller
 {
@@ -33,8 +35,19 @@ class UserLoginController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $value = UserSingUp::userLogin($request->all());
+
+        if ($value['status'] == 200) {
+            $request->session()->regenerate();
+            dump($value);
+        }
+        
+        if (Auth::attempt(['user_name' => $request->name, 'password' => $request->number])) {
+            dump('hello!');
+        }
+
+        return $value;
     }
 
     /**
